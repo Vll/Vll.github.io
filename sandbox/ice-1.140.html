@@ -64,30 +64,39 @@
 	      <img src="/sandbox/ICE04.png"><br><br>
 	      <h7>We can see that a webserver is running and get a location for the forum page.</h7><br><br>
 	      <img src="/sandbox/ICE04.png"><br><br>
-	      <h7>Using ncat it’s possible to see that http on port 80 is definitely open and should be accessible through a standard web browser.</h7><br><br>
+	      <h7>Using ncat it’s possible to see that http on port 80 is definitely open and should be accessible 
+		      through a standard web browser.</h7><br><br>
 	      <img src="/sandbox/ICE05.png"><br><br>
 	      <h7>If we open the address of the webserver in the browser we get the webpage ‘Lazy Admin.’ 
 		      This is the first thing accessible from the server.</h7><br><br>
 	      <img src="/sandbox/ICE06.png"><br><br>
-	      <h7></h7><br><br>
+	      <h7>I wondered if it was hiding any information. I simple select all’d the pages 
+		      content. There was hidden text, with the same color font as the background. Likely 
+		      just clues or tips to solving the server.</h7><br><br>
 	      <img src="/sandbox/ICE06.01.png"><br><br>
-	      <h7></h7><br><br>
+	      <h7>Using nikto, I was able to see all the information about the web address.</h7><br><br>
 	      <img src="/sandbox/ICE07.png"><br><br>
-	      <h7></h7><br><br>
+	      <h7>I then used wfuzz to brute force search the http of this address, and it revealed apart 
+		      from the index.html but a forum as well.</h7><br><br>
 	      <img src="/sandbox/ICE08.png"><br><br>
-	      <h7></h7><br><br>
+	      <h7>I then used wfuzz to search the https of the web server address. This revealed 
+		      both a mail server and php server.</h7><br><br>
 	      <img src="/sandbox/ICE09.png"><br><br>
-	      <h7></h7><br><br>
+	      <h7>I went to the forum first and tried to gain access.</h7><br><br>
 	      <img src="/sandbox/ICE10.png"><br><br>
-	      <h7></h7><br><br>
+	      <h7> After looking through the various threads posted on the forum, one post 
+		      had a log of an password which was accidentally posted as a user name.</h7><br><br>
 	      <img src="/sandbox/ICE11.png"><br><br>
-	      <h7></h7><br><br>
+	      <h7>It was unclear which admin the password belonged to. After reading further 
+		      through the log it appeared to belong to ‘mbrown.’</h7><br><br>
 	      <img src="/sandbox/ICE12.png"><br><br>
-	      <h7></h7><br><br>
+	      <h7>After attempting to log in with this user password name 
+		      combo I was into the forum as the admin mbrown.</h7><br><br>
 	      <img src="/sandbox/ICE13.png"><br><br>
-	      <h7></h7><br><br>
+	      <h7>After looking through his profile, I was able to gain access to 
+		      his mail account located on the https webmail server.</h7><br><br>
 	      <img src="/sandbox/ICE14.png"><br><br>
-	      <h7></h7><br><br>
+	      <h7>In his emails, he had received, one in particular that had the user and password for the php server.</h7><br><br>
 	      <img src="/sandbox/ICE15.png"><br><br>
 	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE16.png"><br><br>
