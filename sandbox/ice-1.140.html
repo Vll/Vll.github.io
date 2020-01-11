@@ -51,78 +51,82 @@
 	"sandbox" or isolate your work enviroment from your actual computer.<br><br> 
 </h7>	      
 <img src="/sandbox/ICE01.png"><br><br>
-	      <h7> To find the IP address assigned to De-ICE I first ran a basic ifconfig to 
-		      see which IP range had been assigned. </h7>
+	      <h7>To find the IP address assigned to De-ICE I first ran a basic ifconfig to 
+		      see which IP range had been assigned.</h7><br><br>
 	      <img src="/sandbox/ICE02.png"><br><br>
-	      <h7></h7>
+	      <h7>Kali is using the 10.0.2.x range. So I then ran ‘netdiscover’ to look for other connections.</h7><br><br>
 	      <img src="/sandbox/ICE03.png"><br><br>
-	      <h7></h7>
+	      <h7> We get four results, two of those are running Cadmus. I then ran nmap to see what services were running on them. 
+		      The first yielded no results but the second showed various open ports.</h7><br><br>
 	      <img src="/sandbox/ICE04.png"><br><br>
-	      <h7></h7>
+	      <h7>I did one more scan on those specific open ports to see if I had missed anything. The results gave me a general 
+		      sense of what I was dealing with and I concluded that this was the correct server.</h7><br><br>
 	      <img src="/sandbox/ICE04.png"><br><br>
-	      <h7></h7>
+	      <h7>Next, to establish what was running on the server I ran dirb to find 
+		      any databases running on the servers.</h7><br><br>
 	      <img src="/sandbox/ICE05.png"><br><br>
-	      <h7></h7>
+	      <h7>We can see that a webserver is running and get a location for the forum page. Using ncat it’s possible to see that http 
+		      on port 80 is definitely open and should be accessible through a standard web browser.</h7><br><br>
 	      <img src="/sandbox/ICE06.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE06.01.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE07.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE08.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE09.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE10.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE11.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE12.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE13.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE14.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE15.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE16.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE17.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE18.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE19.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE20.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE21.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE22.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE23.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE024.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE25.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE26.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE27.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE28.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE29.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE30.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE31.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE32.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE33.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE34.png"><br><br>
-	      <h7></h7>
+	      <h7></h7><br><br>
 
 
 <h2>All Tags</h2>        
