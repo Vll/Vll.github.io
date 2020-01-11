@@ -98,29 +98,36 @@
 	      <img src="/sandbox/ICE14.png"><br><br>
 	      <h7>In his emails, he had received, one in particular that had the user and password for the php server.</h7><br><br>
 	      <img src="/sandbox/ICE15.png"><br><br>
-	      <h7></h7><br><br>
+	      <h7>I logged into the php server with these new credentials to 
+		      see what information I could find. </h7><br><br>
 	      <img src="/sandbox/ICE16.png"><br><br>
-	      <h7></h7><br><br>
+	      <h7>I wasn’t sure what I was looking for at this point, but attempted to find out any useful information.</h7><br><br>
 	      <img src="/sandbox/ICE17.png"><br><br>
-	      <h7></h7><br><br>
+	      <h7>I was able to find the account names and some encrypted password hash information.</h7><br><br>
 	      <img src="/sandbox/ICE18.png"><br><br>
-	      <h7></h7><br><br>
+	      <h7>Using the hash information, a google search revealed the password for rheadley to be ‘tum-ti-tum.’ I could now try to ftp 
+		      into the server since the port was open and I had some password credential information.</h7><br><br>
 	      <img src="/sandbox/ICE19.png"><br><br>
-	      <h7></h7><br><br>
+	      <h7>Now I was successfully inside of the server through ftp. I was then able to access the file system directly.</h7><br><br>
 	      <img src="/sandbox/ICE20.png"><br><br>
-	      <h7></h7><br><br>
+	      <h7>With ftp, I’m able to see all the files accessible by the administrator. </h7><br><br>
 	      <img src="/sandbox/ICE21.png"><br><br>
-	      <h7></h7><br><br>
+	      <h7>After changing into the ftp directory, and then /incoming, I was able to find a file containing a backup of 
+		      the webhost, which I then downloaded to my root directory.</h7><br><br>
 	      <img src="/sandbox/ICE22.png"><br><br>
-	      <h7></h7><br><br>
+	      <h7>With no more available directories available to search through, I attempted to ssh 
+		      into mbrown’s account with the root credentials.</h7><br><br>
 	      <img src="/sandbox/ICE23.png"><br><br>
-	      <h7></h7><br><br>
+	      <h7>Once successfully in, I was able to navigate to his primary directory which had a 
+		      private rsa key. I downloaded the key and used chmod to make it readable.</h7><br><br>
 	      <img src="/sandbox/ICE024.png"><br><br>
-	      <h7></h7><br><br>
+	      <h7>With his key, I was then able to access the entire system.</h7><br><br>
 	      <img src="/sandbox/ICE25.png"><br><br>
-	      <h7></h7><br><br>
+	      <h7>From there I was able to ssh into another account 
+		      which provided the aes-256 information.</h7><br><br>
 	      <img src="/sandbox/ICE26.png"><br><br>
-	      <h7></h7><br><br>
+	      <h7>Now that I had the AES encryption information, I unzipped the web host backup file and could use the encryption 
+		      method to unlock and decipher the password and shadow information.</h7><br><br>
 	      <img src="/sandbox/ICE27.png"><br><br>
 	      <h7></h7><br><br>
 	      <img src="/sandbox/ICE28.png"><br><br>
