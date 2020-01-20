@@ -39,8 +39,9 @@
 </div>
 <h2>Wireshark and TcpDump 101</h2>
 	      
-<h7>WireShark and tcpdump are programs used to sniff(copy) and anaylze network traffic. They are both open source (free) and comes standard with Kali Linux.
-However, neither is a point and click application. All tcpdump commands must be run through the command prompt.<br><br></h7>
+              <h7>WireShark and tcpdump are programs used to sniff(copy) and anaylze network traffic. They are both open source
+		  (free) and comes standard with Kali Linux. However, neither is a point and click application. All tcpdump 
+		  commands must be run through the command prompt.<br><br></h7>
 	      
               <img src="/pen-test-basics/tcp01.png"><br><br>
 	      <h7>By using the tcpdump command "tcpdump -v -w /root/Documents" tcpdump begins to capture and write a tcp packet capture scan to the file, "/root/Documents," 
@@ -56,7 +57,11 @@ However, neither is a point and click application. All tcpdump commands must be 
 		      the location where it was dumped, /root/Documents/tcp0. The -v variable is supposed to give us the header of the 
 		      packet data. The initial four sets of numbers preceding each data packet indicates the time stamp of each packet. 
 		      Following that, is the source IP(kali:50305) and the destination IP. Next is the checksum status, which varies for 
-		      each packet, and then everything else is related to the DNS application response. </h7><br><br>
+		      each packet, and then everything else is related to the DNS application response. <br><br>
+	      Though there is useful information that can be gleemed from viewing the packet capture in tcpdump, it's even more benifical to 
+		      use Wireshark. In order to do so, the capture interface eth0 was selected with the capture filter setting, ‘not 
+		      broadcast and not multicast’ selected. In wireshark, each packet’s information can be viewed in one of three windows. 
+		      In the first window, each packet with source, destination and protocol information can be viewed.</h7><br><br>
 	      <img src="/pen-test-basics/wire01.png"><br><br>
 	      <h7></h7><br><br>
 	      <img src="/pen-test-basics/wire02.png"><br><br>
