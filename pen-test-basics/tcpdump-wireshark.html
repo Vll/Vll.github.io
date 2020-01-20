@@ -52,7 +52,11 @@ However, neither is a point and click application. All tcpdump commands must be 
 		      Using the ctrl+C command, tcpdump then prints a message identifying the amount of packets captured(1282) and dropped(50). 
 </h7><br><br>
 	      <img src="/pen-test-basics/tcp03.png"><br><br>
-	      <h7></h7><br><br>
+	      <h7>In order to view the captured packet information in tcpdump, the command 'tcpdump -r' was used to read the file, at 
+		      the location where it was dumped, /root/Documents/tcp0. The -v variable is supposed to give us the header of the 
+		      packet data. The initial four sets of numbers preceding each data packet indicates the time stamp of each packet. 
+		      Following that, is the source IP(kali:50305) and the destination IP. Next is the checksum status, which varies for 
+		      each packet, and then everything else is related to the DNS application response. </h7><br><br>
 	      <img src="/pen-test-basics/wire01.png"><br><br>
 	      <h7></h7><br><br>
 	      <img src="/pen-test-basics/wire02.png"><br><br>
