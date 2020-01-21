@@ -39,31 +39,45 @@
 </div>
 <h2>Capturing a DoS Attack 101</h2>
 	      
-              <h7><br><br></h7>
+              <h7>To demonstrate a DoS attack, Metasploit server was launched to be 
+		      the victim on a separate virtualbox machine at local IP 192.168.0.26. 
+		      Simultaneously, using Kali Linux, Wireshark was launched on a Kali virtualbox, which was 
+		      used to launch the attack, which can be seen as the eth0 network traffic at IP 192.168.0.25.</h7><br><br>
 	            <img src="/pen-test-basics/Dos01.png"><br><br>
-              <h7><br><br></h7>
+              <h7>As shown above, hping3 launched a flood attack, which lasted for around 
+		      twenty seconds and transmitted 35803 packets. Attacks like this can last for hours, so it's easy to imagine
+		      the amount of data sent, in order to obstruct the network.</h7><br><br>
 	            <img src="/pen-test-basics/Dos02.png"><br><br>
-              <h7><br><br></h7>
+              <h7>Wireshark captured the attack on the Metasploit server starting at packet 113. The first reply 
+		      from the Metasploit server happens at packet 129, after 17 ping requests are sent from 
+		      the attacking machine.</h7><br><br>
 	            <img src="/pen-test-basics/Dos03.png"><br><br>
-              <h7><br><br></h7>
+              <h7>After 20 seconds, packet capture 14421 is recorded. It’s likely 
+		      Metasploit was paralyzed through the duration of the attack.</h7><br><br>
 	            <img src="/pen-test-basics/Dos04.png"><br><br>
-              <h7><br><br></h7>
+              <h7>The Half-Open attack is also done with hping3. The same virtual machines were used, using 
+		      the same IP addresses.</h7><br><br>
 	            <img src="/pen-test-basics/Dos05.png"><br><br>
-              <h7><br><br></h7>
+              <h7>During the half-open attack, hping3 outputs some basic packet attack information.<br><br></h7>
 	            <img src="/pen-test-basics/Dos06.png"><br><br>
-              <h7><br><br></h7>
+              <h7>After ten seconds, the attack is ended. In this attack only 11 packets were transmitted in total. The 
+		      wireshark output of the same attack reveals a few things. The first packet arrives as packet 90.</h7><br><br>
 	            <img src="/pen-test-basics/Dos07.png"><br><br>
-              <h7><br><br></h7>
+              <h7>This first packet is a SYN packet. Normally this is used to intialize a tcp connection, however an hping attack
+		      is just a constant stream of SYN packets with no expectation of returning ACK packets.</h7><br><br>
 	            <img src="/pen-test-basics/Dos08.png"><br><br>
-              <h7><br><br></h7>
+              <h7>Though the attack continues with the same packet, it attacks a different port. The first 
+		      port attacked was 1264, this time it’s 1265.</h7><br><br>
 	            <img src="/pen-test-basics/Dos09.png"><br><br>
-              <h7><br><br></h7>
+              <h7>The final SYN attack packet is sent as packet 125 to port 1274.</h7><br><br>
 	            <img src="/pen-test-basics/Dos10.png"><br><br>
-              <h7><br><br></h7>
+              <h7></h7><br><br>
 	            <img src="/pen-test-basics/Dos11.png"><br><br>
-              <h7><br><br></h7>
+              <h7>The final packet returned from the victim host was RST/ACK. Because we received this return packet, we can 
+		      determine that the three way handshake was interrupted and also that either the response would not get 
+		      forwarded back the client or there was no service running on said port.</h7><br><br>
 	            <img src="/pen-test-basics/Dos12.png"><br><br>
-              <h7><br><br></h7>
+              <h7></h7><br><br>
 	     
 
 
