@@ -471,9 +471,9 @@ pre {
   padding: 0.3em 0.6em;
   border-radius: 0.3em; }
   .theme--dark .tag, .theme--dark .tag-cloud > a {
-    background-color: #1E2227; }
+    background-color: #eef3f7; }
   .theme--light .tag, .theme--light .tag-cloud > a {
-    background-color: #f2f6f9; }
+    background-color: #bacdde; }
   .tag:hover, .tag-cloud > a:hover {
     text-decoration: none;
     color: #9ad9a9 !important; }
