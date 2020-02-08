@@ -92,7 +92,7 @@ body {
   min-height: 100vh;
   flex-direction: column; }
   .theme--dark body {
-    background-color: #e6f2ff;
+    background-color: #ffffff;
     color: #4b759b; }
   .theme--light body {
     background-color: #DAE4ED;
