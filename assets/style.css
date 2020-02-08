@@ -93,7 +93,7 @@ body {
   flex-direction: column; }
   .theme--dark body {
     background-color: #ffffff;
-    color: #4b759b; }
+    color: #5353c6; }
   .theme--light body {
     background-color: #DAE4ED;
     color: #1E2227; }
@@ -288,7 +288,7 @@ pre {
   .site-title, .site-title:visited, .site-title:hover {
     text-decoration: none; }
     .theme--dark .site-title, .theme--dark .site-title:visited, .theme--dark .site-title:hover {
-      color: #759bbd; }
+      color: #4b759b; }
     .theme--light .site-title, .theme--light .site-title:visited, .theme--light .site-title:hover {
       color: #1E2227; }
 
