@@ -114,11 +114,13 @@ ul, ol, dl, figure,
 .highlight {
   margin-bottom: 10px; }
 
+h7 {
+  background-color:black; 
+  border-radius: 0.7em;
+}
+
 p {
   margin: 0.5em 0; }
-
-clean{background-color:black; border-radius: 0.7em;
-}
 
 figure {
   width: 100%;
