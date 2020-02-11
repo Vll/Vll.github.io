@@ -115,7 +115,8 @@ ul, ol, dl, figure,
   margin-bottom: 10px; }
 
 h7 {
-  background-color:#eef3f7; 
+  background-color:#eef3f7;
+  border-radius: 0.7em;
   border-radius: 0.3em;
 }
 
@@ -238,6 +239,9 @@ pre {
   max-width: -webkit-calc(800px - (30px));
   max-width: calc(800px - (30px));
   margin-right: auto;
+  border: solid;
+  border-color: #eef3f7;
+  border-radius: 0.7em;
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px; }
