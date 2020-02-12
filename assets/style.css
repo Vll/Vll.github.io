@@ -310,6 +310,7 @@ pre {
  */
 .author-box {
   margin-bottom: 1em;
+  margin-top:1em;
   text-align: left;
   min-height: 72px;
   background-color: #eef3f7;
