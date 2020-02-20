@@ -53,7 +53,7 @@ is complicite in the crime, and it is our job to find any proof in the evidence 
 <img src="/forensics/Investigation03.png"><br><br>
 	      <h7>In the recycling bin we can see one of the last things deleted was an "employee list."</h7> <br><br>
 <img src="/forensics/Investigation04.png"><br><br>
-	      <h7>we can see in the recent files list a python script called "secret sauce."</h7><br><br>
+	      <h7>We can see in the recent files list a python script called "secret sauce."</h7><br><br>
 <img src="/forensics/Investigation05.png"><br><br>
 	      <h7>If we look through the user’s internet history, we can see that the user has visited numerous 
 		      coding websites, probably a novice coder that needs help writing a malicious piece of code. 
@@ -67,9 +67,8 @@ is complicite in the crime, and it is our job to find any proof in the evidence 
 	      <h7>We can see in the timeline that the mysterious process, "wintroj.exe" is linked to hidden functionality.
 	      It's clearly a trojan virus, but can we prove how it got on to the workstation and who put it there?</h7> <br><br>
 <img src="/forensics/Investigation09.png"><br><br>
-	      <h7>Here we can see all the processes associated with the Jane’s RAM capture. We can see that one IP 
-		      seems to be questionable: 172.16.247.194. Also the IP 69.175.70.186:9 could be a potential 
-		      point of interest.</h7> <br><br>
+	      <h7>Here we can see all the processes associated with the Jane’s RAM capture. We can see that the virus is using the IP 
+		 address: 172.16.247.194.</h7> <br><br>
 <img src="/forensics/Investigation10.png"><br><br>
 	      <h7>Jane has a few communications that begin to reveal her actions. In the final email, we can 
 		      see Roger Young has emailed her a link to a picture.</h7> <br><br>
@@ -104,18 +103,26 @@ is complicite in the crime, and it is our job to find any proof in the evidence 
 		      UTC +8:00 Beijing, Chongqing, Hong Kong, Urumqi. The registry values indicate 
 		      that this time zone was last written to the hard drive on the date of 12/12/23 05:00:14 PM.</h7> <br><br>
 <img src="/forensics/Investigation19.png"><br><br>
-	      <h7></h7> <br><br>
+	      <h7>Normally, you should be able to export the logs using Encase, however, there are sometimes errors 
+	      so instead I used FTK imager to export logs.</h7> <br><br>
 <img src="/forensics/Investigation20.png"><br><br>
+	      <h7>We can see in the logs the beginning of the incident, which begins at 6:13 on 12/30. </h7> <br><br>
+<img src="/forensics/Investigation21.png"><br><br>
 	      <h7>The desktop.ini file reveals suspicious 
 		      shell code activity and the contents 
 		      of the BingBarSetup, which appears to be 
 		      malicious.</h7> <br><br>
-<img src="/forensics/Investigation21.png"><br><br>
-	      <h7></h7> <br><br>
 <img src="/forensics/Investigation22.png"><br><br>
-	      <h7></h7> <br><br>
+	      <h7>We can see the bing bar changes to auto-start as well as multiple services being altered. It 
+		      appears user privileges are altered and we can see drivers have been installed and new users 
+		      are added as well.</h7> <br><br>
 <img src="/forensics/Investigation23.png"><br><br>
-	      <h7></h7> <br><br>
+	      <h7>Outbound connections are made. The time was altered and then a restart was initiated. With all the evidence
+		      in hand, it seems that Jane was involved and is responsible for the malware and the data breach. If she had not 
+		      visited the programming sites, I would say that there is a possibilty she was just negligent, and was the victim
+		      of a phishing scheme. However, not only does she visit the python coders website, this all happens within hours
+		      of her hiring. Clearly, her only objective was to steal corporate data, either for another organization or possibly
+		      to sell on the Dark Web.</h7><br><br>
 	      
 	      
 	      
