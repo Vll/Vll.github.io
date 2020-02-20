@@ -39,46 +39,68 @@
 </h7>
 </div>
 	      
-<h2>Password Cracking 101</h2>
+<h2>Corporate Theft Investigation</h2>
 	      
-<h7>John the Ripper is known as the go to password cracking program. It's free and comes standard with Kali Linux.
-However it is not a point and click use application. All commands must be run through the command prompt. As an example, 
-	we will crack the default password that comes with kali, which is "toor," or root backwards.<br><br></h7>
+<h7>Using Forensics tools, we'll investigate the theft of corporate property by an employee named, Jane. It is beleived that she
+is complicite in the crime, and it is our job to find any proof in the evidence obtained. A copy of the hard drive and the 
+	volitile Ram was taken after it was established that her workstation was the initial scene of the crime.
+	<br><br></h7>
 	      
-<img src="/pen-test-basics/pass01.png"><br><br>	      
-<h7>As you can see, there are few things happening, let me try to explain. You can see I have typed in the 
-	simple command, unshadow. Since I added nothing following it, it has returned the values, data, and 
-	the order of that information. Basically, what you need to know is that you must copy two sets of files, so that they can be
-	      combined, and then decoded. As you can see here, the next command entered is 'cp,' followed by the folder, and what
-	you wish to name them. Both of these files need to be copied using this command.</h7> <br><br>
-<code>cp /etc/passwd/ passwd</code><br>
-<code>cp /etc/shadow/ shadow</code><br>
-<code>unshadow passwd shadow > crack_file</code><br><br>	      
+<img src="/forensics/investigation01.png"><br><br>	      
+<h7>As you can see, \</h7> <br><br>
+<img src="/forensics/investigation02.png"><br><br>
+	      <h7></h7> <br><br>
+<img src="/forensics/investigation03.png"><br><br>
+	      <h7></h7> <br><br>
+<img src="/forensics/investigation04.png"><br><br>
+	      <h7></h7> <br><br>
+<img src="/forensics/investigation05.png"><br><br>
+	      <h7></h7> <br><br>
+<img src="/forensics/investigation06.png"><br><br>
+	      <h7></h7> <br><br>
+<img src="/forensics/investigation07.png"><br><br>
+	      <h7></h7> <br><br>
+<img src="/forensics/investigation08.png"><br><br>
+	      <h7></h7> <br><br>
+<img src="/forensics/investigation09.png"><br><br>
+	      <h7></h7> <br><br>
+<img src="/forensics/investigation10.png"><br><br>
+	      <h7></h7> <br><br>
+<img src="/forensics/investigation11.png"><br><br>
+	      <h7></h7> <br><br>
+<img src="/forensics/investigation12.png"><br><br>
+	      <h7></h7> <br><br>
+<img src="/forensics/investigation13.png"><br><br>
+	      <h7></h7> <br><br>
+<img src="/forensics/investigation14.png"><br><br>
+	      <h7></h7> <br><br>	      
+<img src="/forensics/investigation15.png"><br><br>
+	      <h7></h7> <br><br>
+<img src="/forensics/investigation16.png"><br><br>
+	      <h7></h7> <br><br>
+<img src="/forensics/investigation17.png"><br><br>
+	      <h7></h7> <br><br>
+<img src="/forensics/investigation18.png"><br><br>
+	      <h7></h7> <br><br>
+<img src="/forensics/investigation19.png"><br><br>
+	      <h7></h7> <br><br>
+<img src="/forensics/investigation20.png"><br><br>
+	      <h7></h7> <br><br>
+<img src="/forensics/investigation21.png"><br><br>
+	      <h7></h7> <br><br>
+<img src="/forensics/investigation22.png"><br><br>
+	      <h7></h7> <br><br>
+<img src="/forensics/investigation23.png"><br><br>
+	      <h7></h7> <br><br>
 	      
-<h7>You can now use the unshadow command, combining the two copied folders, and designating a name for the output file. The 
-	output file can be named whatever you want, it doesn't have to be crack_file. It can be any output, but remember 
-	      you will need to type it into the command prompt, more than once, so you may want to come up with something 
-	      simple, or an abbreviation.</h7><br><br>	      
-
-<img src="/pen-test-basics/pass02.png"><br><br>
-
-<h7>Basically, John the ripper takes the hashed passwords file, which contains the system's password, and then "decodes" it 
-	with the shadow file, which was used to obfuscate the password. John the Ripper is also capable of comparing the results with
-	      any list of known or commonly use passwords, such as the infamous 'Rock You' password list. However, there are so many passwords
-	      in this list, that I've often found this can actually slow down the process. It's best to check the list John has included or set by default first. Trust me, 
-	I once spent 36 hours cracking a password with the rock you list, then cracked the same password in an hour an a half with the default list. </h7><br><br>	      
-
-<code>john crack_file</code><br><br>
 	      
-<img src="/pen-test-basics/pass04.png"><br><br>	
-<h7>Finally, as you can see here, the output of the crack_file was: root:toor:0:0:/root:/bin/bash. The output can be viewed 
-	with the following command:</h7><br><br>
-	
-<code>john --show crack_file</code><br><br>	
-	
-<h7>The default kali linux user name is root, followed by the second bit, ‘toor’, which 
-	was the default password output of the john crack_file which reveals the password.</h7><br><br>	
-
+	      
+	      
+	      
+	      
+	      
+	      
+	      
 <h2>All Tags</h2>        
   <div class="tag-cloud">
   <a href="/tag/linux/" class="set-5">linux</a> <a href="/tag/john-the-ripper/" class="set-1">john-the-ripper</a>
